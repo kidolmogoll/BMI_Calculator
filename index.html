@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator app</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <main>
+      <section id="bmi-calculator">
+        <header>
+          <button class="switch_btn">Saved Results</button>
+        </header>
+        <h2 class="bmi_head">BMI Calculator</h2>
+        <article class="gender">
+          <h3 class="gender_head">Gender</h3>
+          <div>
+            <figure>
+              <img class="male" width="50px" src="img/person-solid.svg" />
+              <figcaption>Male</figcaption>
+            </figure>
+            <figure>
+              <img
+                class="female"
+                width="50px"
+                src="img/person-dress-solid.svg"
+              />
+              <figcaption>Female</figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="bmi_parameters">
+          <h3 class="paremeters_head">Parameters</h3>
+          <ul>
+            <li>
+              <label for="height">
+                <span class="input-label">
+                  <img width="13px" src="img/ruler-vertical-solid.svg" />
+                  <p>Height <span>M</span></p>
+                </span>
+                <input
+                  type="number"
+                  min="0.5464"
+                  max="2.72"
+                  autocomplete="off"
+                  id="height"
+                  name="height"
+                />
+              </label>
+            </li>
+            <li>
+              <label for="weight">
+                <span class="input-label">
+                  <img width="18px" src="img/weight-scale-solid.svg" />
+                  <p>Weight <span>KG</span></p>
+                </span>
+                <input
+                  type="number"
+                  min="2"
+                  max="635"
+                  autocomplete="off"
+                  id="weight"
+                  name="weight"
+                />
+              </label>
+            </li>
+          </ul>
+          <button class="calculate-btn" type="submit">
+            Calculate your BMI
+          </button>
+        </article>
+      </section>
+    </main>
+
+    <!-- BMI RESULT PAGE -->
+    <div class="bmi-container">
+      <section id="bmi-result">
+        <button id="untoggle" class="back_btn">Back</button>
+        <article class="bmi-card">
+          <h2 class="card_head">Your BMI is</h2>
+          <span class="result"></span>
+          <ul class="bmi_track">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <div class="bmi-thumb"></div>
+          </ul>
+          <div class="conclusion"><span></span></div>
+        </article>
+        <article class="save-option">
+          <img width="20px" src="img/bookmark-solid.svg" />Save
+        </article>
+      </section>
+    </div>
+    <div id="blur"></div>
+    <!-- 
+     SAVED RESULTS PAGE -->
+
+    <button class="switch_btn_back">Back</button>
+    <section class="saved_bmi_results">
+      <h2 class="saved_bmi_results_head"><span>Saved</span> BMI Results</h2>
+      <section id="saved_bmi_results">
+        <ul class="saved_bmi_list"></ul>
+      </section>
+    </section>
+  </body>
+</html>
